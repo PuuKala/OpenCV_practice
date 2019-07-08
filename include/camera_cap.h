@@ -16,6 +16,7 @@ public:
     void run();
 private:
     State _state;
+    cv::VideoCapture _cap;
 };
 
 #endif // CAMERA_CAP_H

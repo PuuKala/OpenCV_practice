@@ -54,7 +54,7 @@ std::string UserInput(int argc, char const *argv[]){
             return "";
         }
     }
-    else if (argc > 2)
+    else if (argc > 2 || argc < 2)
     {
         std::cout << "Incorrect amount of commands. Give -h or --help for help." << std::endl;
         return "";
