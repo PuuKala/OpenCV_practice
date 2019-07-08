@@ -10,10 +10,12 @@ class CamCap {
 public:
     enum State { kCapCrop };
 
-    CamCap(State);
+    CamCap(State s);
     ~CamCap();
 
     void run();
+private:
+    State _state;
 };
 
 #endif // CAMERA_CAP_H
