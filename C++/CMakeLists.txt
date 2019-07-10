@@ -1,0 +1,18 @@
+cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
+
+file(GLOB SRC "src/*.cpp")
+
+FIND_PACKAGE(Threads)
+IF (NOT Threads_FOUND)
+    MESSAGE(FATAL_ERROR "Package Threads not found.")
+ENDIF(NOT Threads_FOUND)
+
+FIND_PACKAGE(OpenCV)
+IF (NOT OpenCV_FOUND)
+    MESSAGE(FATAL_ERROR "Package OpenCV not found.")
+ENDIF(NOT OpenCV_FOUND)
+
+INCLUDE_DIRECTORIES("include" ${OpenCV_INCLUDE_DIRS})
+
+ADD_EXECUTABLE(OpenCV_demo ${SRC})
+TARGET_LINK_LIBRARIES(OpenCV_demo ${OpenCV_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
