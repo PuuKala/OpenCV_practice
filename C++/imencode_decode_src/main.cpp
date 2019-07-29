@@ -1,3 +1,5 @@
+// A program just to make sure the imencode(".webp", ...) is lossless
+
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include <vector>
